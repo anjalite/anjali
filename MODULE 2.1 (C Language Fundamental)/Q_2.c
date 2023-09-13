@@ -1,19 +1,10 @@
+// swap two numbers without using third variable
 #include<stdio.h>
 main(){
-	int a,b,addition,subtraction,multiply,modulo;
-	float divide;
-	printf("Enter your value :");
-	scanf("%d",&a);
-	printf("Enter your value :");
-	scanf("%d",&b);
-	addition=a+b;
-	subtraction=a-b;
-	multiply=a*b;
-	divide=a/(float)b;
-	modulo=a%b;
-	printf("Addition = %d\n",addition);
-    printf("Subtraction = %d\n",subtraction);	
-    printf("multiplication=%d\n",multiply);
-    printf("division=%.2f\n",divide);
-     printf("Reminder=%d",modulo);
+	int a=10,b=20;
+	printf("before swap a=%d b=%d",a,b);
+	a=a+b;//a=30(10+20)
+	b=a-b;//b=10(30-20)
+	a=a=b;//a=20(30-10)
+	printf("\n after swap a=%d b=%d",a,b);
 }

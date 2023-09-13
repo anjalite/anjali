@@ -1,10 +1,13 @@
-/*WAP to find area of circle*/
+/*
+even or odd
+*/
 #include<stdio.h>
 main(){
-	float pi=3.14;
-	float radius;
-	printf("Enter the radius of circle:");
-	scanf("%f",&radius);
-	printf("area is: %f",3.14*radius*radius);
+	int num;
+	printf("Enter your  value:\n");
+	scanf("%d",&num);
+	(num%2 == 0)?  printf("%d  is even number",num):printf("%d  is odd number",num);
+
+	
 	
 }
