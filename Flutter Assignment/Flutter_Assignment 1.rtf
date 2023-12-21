@@ -1,0 +1,203 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh17440\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\
+\
+\
+Question 2 \
+\
+void main() \{\
+  // Define two numbers\
+  double number1 = 10.0;\
+  double number2 = 5.0;\
+\
+  // Perform addition, subtraction, multiplication, and division\
+  double addition = number1 + number2;\
+  double subtraction = number1 - number2;\
+  double multiplication = number1 * number2;\
+  double division = number1 / number2;\
+\
+  // Display the results\
+  print('Addition: $addition');\
+  print('Subtraction: $subtraction');\
+  print('Multiplication: $multiplication');\
+  print('Division: $division');\
+\}\
+\
+\
+\
+Question 3\
+\
+void main() \{\
+  // Define a number for which you want to find square and cube\
+  double number = 5.0; // Change this number to your desired value\
+\
+  // Calculate square and cube\
+  double square = number * number;\
+  double cube = number * number * number;\
+\
+  // Display the square and cube of the number\
+  print('Number: $number');\
+  print('Square: $square');\
+  print('Cube: $cube');\
+\}\
+\
+\
+Question 4 \
+\
+\
+void main() \{\
+  // Define the value of the radius\
+  double radius = 5.0; // Change this value to the radius of your circle\
+\
+  // Calculate the area of the circle\
+  double area = calculateArea(radius);\
+\
+  // Display the calculated area\
+  print('Radius: $radius');\
+  print('Area of the circle: $area');\
+\}\
+\
+// Function to calculate the area of a circle\
+double calculateArea(double radius) \{\
+  // Using the formula: Area = pi * radius^2\
+  double pi = 3.14159; // Approximate value of pi\
+  double area = pi * radius * radius;\
+  return area;\
+\}\
+\
+\
+Question 5 \
+\
+void main() \{\
+  double base = 5.0; // Replace 5.0 with the base of the triangle\
+  double height = 8.0; // Replace 8.0 with the height of the triangle\
+\
+  // Calculate the area of the triangle\
+  double area = calculateTriangleArea(base, height);\
+\
+  // Display the area of the triangle\
+  print('Base: $base');\
+  print('Height: $height');\
+  print('Area of the triangle: $area');\
+\}\
+\
+// Function to calculate the area of a triangle\
+double calculateTriangleArea(double base, double height) \{\
+  return 0.5 * base * height; // Area = 0.5 * base * height\
+\}\
+\
+\
+Question 6\
+\
+void main() \{\
+  double principal = 1000.0; // Replace 1000.0 with the principal amount\
+  double rate = 5.0; // Replace 5.0 with the rate of interest\
+  double time = 2.0; // Replace 2.0 with the time period\
+\
+  // Calculate simple interest\
+  double simpleInterest = calculateSimpleInterest(principal, rate, time);\
+\
+  // Display the simple interest\
+  print('Principal amount: $principal');\
+  print('Rate of interest: $rate');\
+  print('Time period: $time years');\
+  print('Simple Interest: $simpleInterest');\
+\}\
+\
+// Function to calculate simple interest\
+double calculateSimpleInterest(double principal, double rate, double time) \{\
+  return (principal * rate * time) / 100.0;\
+\}\
+\
+\
+Question 7 \
+\
+void main() \{\
+  double celsius = 25.0; // Replace 25.0 with the temperature in Celsius\
+\
+  // Convert Celsius to Fahrenheit\
+  double fahrenheit = convertCelsiusToFahrenheit(celsius);\
+\
+  // Display the converted temperature\
+  print('$celsius\'b0C is equal to $fahrenheit\'b0F');\
+\}\
+\
+// Function to convert Celsius to Fahrenheit\
+double convertCelsiusToFahrenheit(double celsius) \{\
+  return (9 / 5) * celsius + 32;\
+\}\
+\
+\
+Question 8 \
+\
+import 'dart:io';\
+\
+void main() \{\
+  List<double> subjectMarks = [];\
+  double totalMarks = 0.0;\
+  double percentage;\
+\
+  // Input marks for 5 subjects\
+  for (int i = 0; i < 5; i++) \{\
+    stdout.write('Enter marks for subject $\{i + 1\}: ');\
+    double marks = double.parse(stdin.readLineSync()!);\
+    subjectMarks.add(marks);\
+    totalMarks += marks;\
+  \}\
+\
+  // Calculate percentage\
+  percentage = (totalMarks / (5 * 100)) * 100;\
+\
+  // Display the total marks and percentage\
+  print('Total marks obtained: $totalMarks');\
+  print('Percentage: $percentage%');\
+\}\
+\
+\
+Question 9 \
+\
+void main() \{\
+  int number1 = 5; // Replace 5 with your first number\
+  int number2 = 10; // Replace 10 with your second number\
+\
+  print('Before swapping:');\
+  print('Number 1: $number1');\
+  print('Number 2: $number2');\
+\
+  // Swapping without using a third variable\
+  number1 = number1 + number2; // Add both numbers and assign the sum to number1\
+  number2 = number1 - number2; // Subtract the value of number2 (initial number1) from number1, assign to number2\
+  number1 = number1 - number2; // Subtract the new number2 from the updated number1, assign to number1\
+\
+  print('\\nAfter swapping:');\
+  print('Number 1: $number1');\
+  print('Number 2: $number2');\
+\}\
+\
+\
+Question 10\
+\
+import 'dart:io';\
+\
+void main() \{\
+  stdout.write('Enter a number: ');\
+  int number = int.parse(stdin.readLineSync()!);\
+\
+  if (number > 0) \{\
+    print('$number is a positive number.');\
+  \} else if (number < 0) \{\
+    print('$number is a negative number.');\
+  \} else \{\
+    print('The number is zero.');\
+  \}\
+\}\
+\
+\
+\
+}

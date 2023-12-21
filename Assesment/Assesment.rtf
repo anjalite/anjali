@@ -1,0 +1,33 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh17440\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 CREATE TABLE Customer( Customer_id int(5), Cust_Name varchar(30), City varchar(30), grade bigint (30), salesman_id bigint(30) );\
+\
+INSERT INTO `customer` (`Customer_id`, `Cust_Name`, `City_Name`, `grade`, `salesman_id`) VALUES \
+('3002', 'Nick Rimando', 'New York', '100', '5001'), \
+('3007', 'Brad Dravis', 'New York', '200', '5001'), \
+('3005', 'Graham Zusi', 'California', '200', '5002'),\
+('3008', 'Julian Green', 'London', '300', '5002'),\
+('3004', 'Fabian Johnson', 'Paris', '300', '5006'), \
+('3009', 'Geoff Cameron', 'Berlin', '100', '5003'), \
+('3003', 'Jozy Altidor', 'Moscow', '200', '5007'), \
+('3001', 'Brad Guzan', 'London', ' ', '5005');\
+\
+\
+\
+CREATE TABLE Salesman( Salesman_id int(5), Name varchar(30), City varchar(30), commission decimal (5, 2) );\
+\
+INSERT INTO `salesman` (`Salesman_id`, `Name`, `City`, `commission`) VALUES \
+('5001', 'James Hoog', 'New York', '0.15'), \
+('5002', 'Nail Knite', 'Paris', '0.13'), \
+('5005', 'Pit Alex', 'London', '0.11'), \
+('5006', 'Mc Lyon', 'Paris', '0.14'), \
+('5007', 'Paul Adam', 'Rome', '0.13'), \
+('5003', 'Lauson Hen', 'San Jose', '0.12');\
+\
+\
+SELECT c.cust_name AS CustomerName, c.City AS CustomerCity, s.name AS SalesmanName, s.commission AS Commission FROM customer c JOIN salesman s ON c.salesman_id = s.salesman_id;}
